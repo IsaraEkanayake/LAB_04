@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#ed5f1e</color>
+
+    //all used colour for project
+    <color name="Primary_Color">#FFAA00</color>
+    <color name="Accent_Color">#F57C00</color>
+    <color name="Background_Color">#FAFAFA</color>
+    <color name="Highlight_Color">#FFE082</color>
+    <color name="Text_Color">#424242</color>
+
+</resources>

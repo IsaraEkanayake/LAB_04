@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab_04</string>
+    <string name="main_header">Empty Tasks.</string>
+    <string name="sub_header">Add your first Tasks.</string>
+    <string name="main_des">Welcome to Task Mate, your all-in-one solution for organizing and tracking tasks efficiently! This app is designed to help you stay on top of your daily activities, projects, and deadlines with ease. Whether you\'re managing personal to-dos, work assignments, or long-term goals, [App Name] simplifies task management by offering intuitive features that keep everything in order.</string>
+</resources>
