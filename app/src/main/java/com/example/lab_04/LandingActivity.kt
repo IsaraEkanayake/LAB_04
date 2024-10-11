@@ -14,10 +14,10 @@ class LandingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Inflate the binding
         binding = ActivityLandingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Navigates the user to AddTaskActivity when the button is clicked
         binding.addButton.setOnClickListener {
             val intent = Intent(this, AddTaskActivity::class.java)
             startActivity(intent)

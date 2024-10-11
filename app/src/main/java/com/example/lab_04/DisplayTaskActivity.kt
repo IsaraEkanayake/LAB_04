@@ -27,42 +27,46 @@ class DisplayTaskActivity : AppCompatActivity() {
         val factory = TaskViewModelFactory(repository)
         taskViewModel = ViewModelProvider(this, factory).get(TaskViewModel::class.java)
 
-        // Set up RecyclerView and Adapter
+        // Set up RecyclerView and Adapter to display the list of tasks
         tasksAdapter = TasksAdapter(emptyList(), this, lifecycleScope)
         binding.notsRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.notsRecyclerView.adapter = tasksAdapter
 
-        // Add task button click listener
+        // Navigate back to the DashboardActivity
         binding.home.setOnClickListener {
             val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
         }
 
+        // Navigate to AddTaskActivity to add a new task
         binding.addButton.setOnClickListener {
             val intent = Intent(this, AddTaskActivity::class.java)
             startActivity(intent)
         }
 
-        // Observe LiveData and update the RecyclerView
+        // Observe LiveData from ViewModel to update the RecyclerView when data changes
+        // LiveData ensures that the UI automatically reflects any changes in the task list
         taskViewModel.allTasks.observe(this) { tasks ->
             if (tasks.isEmpty()) {
+                // Show an empty view if no tasks are available
                 binding.emptyView.visibility = View.VISIBLE
                 binding.notsRecyclerView.visibility = View.GONE
             } else {
+                // Show the task list if tasks are available
                 binding.emptyView.visibility = View.GONE
                 binding.notsRecyclerView.visibility = View.VISIBLE
                 tasksAdapter.refreshData(tasks)
             }
         }
 
-        // Implement search functionality
+        // Implement search functionality to filter tasks based on the search query
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                // Filter tasks based on the entered text
+                // Filter the tasks based on the search text entered
                 val filteredTasks = taskViewModel.allTasks.value?.filter {
                     it.title.contains(newText ?: "", ignoreCase = true)
                 } ?: emptyList()
