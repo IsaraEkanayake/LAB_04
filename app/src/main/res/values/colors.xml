@@ -5,10 +5,16 @@
     <color name="orange">#ed5f1e</color>
 
     //all used colour for project
-    <color name="Primary_Color">#FFAA00</color>
-    <color name="Accent_Color">#F57C00</color>
+    <color name="Primary_Color">#1976D2</color>
+    <color name="Accent_Color">#757575</color>
     <color name="Background_Color">#FAFAFA</color>
     <color name="Highlight_Color">#FFE082</color>
     <color name="Text_Color">#424242</color>
+    <color name="Secondary_Button_Color">#0D47A1</color>
+    <color name="backgroundItem">#4682B4</color> <!-- Steel Blue -->
+    <color name="accentItem">#FFFFE0</color>     <!-- Light Yellow -->
+    <color name="dividerColor">#D3D3D3</color> <!-- Light Gray -->
+
+
 
 </resources>

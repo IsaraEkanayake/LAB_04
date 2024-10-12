@@ -8,7 +8,6 @@
     android:background="@color/Background_Color"
     tools:context=".DashboardActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,30 +17,31 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Tasks"
-            android:textColor="@color/Accent_Color"
+            android:text="@string/tasks"
+            android:textColor="@color/Secondary_Button_Color"
             android:textSize="24sp" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
+            android:layout_height="81dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="40dp"
-            android:layout_marginRight="15sp"
+            android:layout_marginRight="15dp"
             android:background="@drawable/taskcontainer"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:id="@+id/ViewTasks">
 
             <ImageView
                 android:id="@+id/imageView18"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/task" />
+                android:contentDescription="@string/task"
+                app:srcCompat="@drawable/doc" />
 
             <TextView
                 android:id="@+id/Total"
@@ -51,7 +51,8 @@
                 android:layout_marginEnd="70dp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-medium"
-                android:text="Total Tasks"
+                android:text="@string/total_tasks"
+                android:textColor="@color/Primary_Color"
                 android:textSize="18sp" />
 
             <TextView
@@ -61,23 +62,40 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-medium"
-                android:text="0"
+                android:text="@string/_0"
+                android:textColor="@color/Primary_Color"
                 android:textColorHint="@color/Accent_Color"
-                android:textColor="#C7C1C1"
                 android:textSize="18sp" />
-
-
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/upcoimg_tasks"
+            android:textColor="@color/Secondary_Button_Color"
+            android:textSize="20sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="330dp"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
             android:backgroundTint="@color/Primary_Color"
+            android:contentDescription="@string/add_task"
             android:src="@drawable/baseline_add_24"
-            app:tint="@color/white"
-            android:layout_marginTop="450dp"/>
+            app:tint="@color/white" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

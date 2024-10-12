@@ -22,5 +22,10 @@ class LandingActivity : AppCompatActivity() {
             val intent = Intent(this, AddTaskActivity::class.java)
             startActivity(intent)
         }
+
+        binding.naviPrevious.setOnClickListener {
+            val intent = Intent(this, OnboardingActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

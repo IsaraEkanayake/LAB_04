@@ -18,7 +18,7 @@ class OnboardingActivity : AppCompatActivity() {
         binding = ActivityOnboardBinding.inflate(layoutInflater)
         setContentView(binding.root) // Set the content view to the binding root
 
-        binding.arrowNavigate.setOnClickListener {
+        binding.btnNext.setOnClickListener {
             val intent = Intent(this, LandingActivity::class.java)
             startActivity(intent) // Start the LandingActivity
         }

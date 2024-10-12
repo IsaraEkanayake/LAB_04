@@ -16,15 +16,17 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Edit Task."
-        android:textColor="@color/orange"
-        android:textSize="24dp" />
+        android:text="@string/edit_task"
+        android:textColor="@color/Secondary_Button_Color"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/updateTitleEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:hint="Edit the title"
+        android:autofillHints=""
+        android:hint="@string/edit_the_title"
+        android:inputType="text"
         android:padding="12dp"
         android:textSize="20sp"
         android:layout_below="@id/editNoteHeading"
@@ -39,10 +41,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/updateTitleEditText"
         android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:background="@drawable/orange_boarder"
         android:fontFamily="@font/poppins"
         android:gravity="top"
-        android:hint="Edit the description"
+        android:hint="@string/edit_the_description"
+        android:inputType="text"
         android:padding="12dp"
         android:textSize="18sp" />
 
@@ -59,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginBottom="-150dp"
-            android:text="Start Time"
+            android:text="@string/start_time1"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
             android:textColor="@color/Primary_Color"/>
@@ -68,10 +72,9 @@
             android:id="@+id/updateEndTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="145dp"
+            android:layout_marginStart="145dp"
             android:layout_marginBottom="-150dp"
-            android:text="End Time"
+            android:text="@string/end_time1"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
             android:textColor="@color/Primary_Color"/>
@@ -94,8 +97,8 @@
             android:layout_gravity="center"
             android:scaleX="0.7"
             android:scaleY="0.7"
-            android:layout_marginRight="-30dp"
-            android:layout_marginLeft="-60dp"/>
+            android:layout_marginEnd="-30dp"
+            android:layout_marginStart="-60dp"/>
 
 
         <TimePicker
@@ -103,8 +106,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="-0dp"
-            android:layout_marginRight="-50dp"
+            android:layout_marginStart="-0dp"
+            android:layout_marginEnd="-50dp"
             android:layout_weight="1"
             android:scaleX="0.7"
             android:scaleY="0.7"
@@ -125,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="92dp"
             android:fontFamily="@font/poppins"
-            android:text="Date"
+            android:text="@string/date2"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/Primary_Color"/>
@@ -135,8 +138,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="-400dp"
-            android:layout_marginRight="-30dp"
+            android:layout_marginStart="-400dp"
+            android:layout_marginEnd="-30dp"
             android:layout_weight="1"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
@@ -157,6 +160,7 @@
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="45dp"
         android:backgroundTint="@color/Primary_Color"
+        android:contentDescription="@string/add_task"
         android:src="@drawable/baseline_done_24"
         app:tint="@color/white" />
 
