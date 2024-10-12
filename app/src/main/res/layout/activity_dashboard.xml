@@ -61,7 +61,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-medium"
-                android:text="Task Count: 0"
+                android:text="0"
                 android:textColorHint="@color/Accent_Color"
                 android:textColor="#C7C1C1"
                 android:textSize="18sp" />
